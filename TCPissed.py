@@ -26,6 +26,11 @@ def main():
     #Removes Script Name from "args"
     args = sys.argv[1:]
 
+    #  3 = all args
+    if(len(args) < 3):
+	help()
+	sys.exit(2)
+	
     banner()
     source_IP = str(args[0])
     destination_IP = str(args[1])
